@@ -987,8 +987,8 @@ class ApiClient {
 
   // --- Chat ---
   // Mirrors the surface area of packages/core/api/client.ts chat methods.
-  // v1 omits getChatSession + updateChatSession (rename) — see the v1 cut
-  // list in /Users/qingnaiyuan/.claude/plans/plan-velvety-puddle.md.
+  // The initial mobile chat scope intentionally omitted getChatSession and
+  // updateChatSession (rename).
 
   async listChatSessions(
     opts?: { signal?: AbortSignal },

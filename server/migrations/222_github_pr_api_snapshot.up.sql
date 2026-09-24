@@ -37,7 +37,7 @@ ALTER TABLE github_pull_request
 -- (pr_id, ordinal): two checks can share a name (matrix jobs, re-runs), so name
 -- is not unique. The (pr_id, ordinal) UNIQUE index is created CONCURRENTLY in
 -- the next migration (223) — no index (including a PRIMARY KEY's) may be built
--- non-concurrently in a migration, even on a new table (see CLAUDE.md), so the
+-- non-concurrently in a migration, even on a new table (see AGENTS.md), so the
 -- table is created without a primary key and the unique index is added in its
 -- own single-statement migration.
 CREATE TABLE github_pull_request_check_run (

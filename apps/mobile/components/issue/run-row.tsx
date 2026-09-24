@@ -6,9 +6,8 @@
  * dispatched, running}`, and the status badge / colour swaps based on the
  * AgentTask.status enum.
  *
- * Tapping a past row is a no-op in v1 — the transcript-detail screen is
- * explicitly out of scope per /Users/qingnaiyuan/.claude/plans/
- * ok-plan-linked-taco.md.
+ * Tapping a past row is a no-op because mobile does not yet provide a
+ * transcript-detail screen.
  */
 import { Alert, Pressable, View } from "react-native";
 import type { AgentTask } from "@multica/core/types";

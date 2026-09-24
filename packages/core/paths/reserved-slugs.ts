@@ -9,7 +9,7 @@
  * Single source of truth: `server/internal/handler/reserved_slugs.json`.
  * The Go backend embeds that JSON; this file is regenerated from it.
  *
- * Convention for new global routes (CLAUDE.md): use a single word
+ * Convention for new global routes (AGENTS.md): use a single word
  * (`/login`, `/inbox`) or `/{noun}/{verb}` (`/workspaces/new`). Hyphenated
  * root-level word groups (`/new-workspace`, `/create-team`) collide with
  * common user workspace names — see PR for full discussion.

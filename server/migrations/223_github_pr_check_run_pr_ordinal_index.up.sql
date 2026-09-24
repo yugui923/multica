@@ -1,6 +1,6 @@
 -- Single statement: CREATE UNIQUE INDEX CONCURRENTLY cannot run inside a
 -- transaction or share a multi-command migration file. Split out from the table
--- creation in 222 so no index is built non-concurrently (CLAUDE.md rule applies
+-- creation in 222 so no index is built non-concurrently (AGENTS.md rule applies
 -- even to indexes on newly created tables, including a PRIMARY KEY's).
 --
 -- (pr_id, ordinal) is unique per snapshot — the atomic replace deletes all rows
