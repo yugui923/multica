@@ -1,6 +1,6 @@
 # Mobile App Rules (apps/mobile/)
 
-For cross-app sharing rules, see the root `CLAUDE.md` *Sharing Principles* section. This file documents the locked tech-stack baseline and the few mobile-specific rules — so AI doesn't suggest outdated alternatives.
+For cross-app sharing rules, see the root `AGENTS.md` *Sharing Principles* section. This file documents the locked tech-stack baseline and the few mobile-specific rules — so coding agents don't suggest outdated alternatives.
 
 ## What mobile may import from `packages/`
 
@@ -47,7 +47,7 @@ Mobile is allowed to differ in **UI and interaction** — it's a phone, not a po
 
 - **Counts / visibility** — same N for the same filter, under identical pagination / coalescing rules.
 - **Permissions / access** — mirror the same logic web uses (from `packages/core`); don't re-derive from feel.
-- **State enums / transitions** — render every status / priority / inbox type / comment type, with a sensible fallback for unknown values (per "API Response Compatibility" in the root CLAUDE.md). Never silently drop a category.
+- **State enums / transitions** — render every status / priority / inbox type / comment type, with a sensible fallback for unknown values (per "API Response Compatibility" in the root AGENTS.md). Never silently drop a category.
 - **Data identity** — same `id`, same `slug`, same canonical fields. Don't invent ids or normalize differently.
 
 **When UI must diverge**, write at the divergence point what rule it's mirroring (point at the source function in `packages/core` or `packages/views`) and why mobile renders it differently. A future reader should be able to tell in 30 seconds that the divergence is intentional and find the web-side source of truth.
@@ -442,7 +442,7 @@ This rule exists because `apps/mobile/data/` was once committed-but-not-tracked 
 
 Mobile's fetch wrapper (`apps/mobile/data/api.ts`) MUST implement all four. Missing any of them is a bug, not a deferred polish item.
 
-1. **Zod `parseWithFallback` for response validation.** Strictly enforced by the root CLAUDE.md "API Response Compatibility" section and the "Type drift defense" section above. **Any new endpoint method that does `as T` on the response body is a bug.** Reuse schemas from `packages/core/api/schemas.ts` (pure Zod exports, on the mobile sharing whitelist); define mobile-side fallbacks for new endpoints in `apps/mobile/data/`.
+1. **Zod `parseWithFallback` for response validation.** Strictly enforced by the root AGENTS.md "API Response Compatibility" section and the "Type drift defense" section above. **Any new endpoint method that does `as T` on the response body is a bug.** Reuse schemas from `packages/core/api/schemas.ts` (pure Zod exports, on the mobile sharing whitelist); define mobile-side fallbacks for new endpoints in `apps/mobile/data/`.
 
 2. **`onUnauthorized` 401 callback.** The `ApiClientOptions.onUnauthorized` hook fires on every 401 and must be wired in `app/_layout.tsx` to: clear auth token, clear workspace store, clear TanStack Query cache, navigate to `/login`. Without it a session that expired server-side puts every subsequent request into a 401 loop and the user sees opaque "API error: 401" toasts on every screen. Use a `signingOutRef` to make the callback idempotent — multiple in-flight requests will all 401 simultaneously when a session expires.
 
@@ -517,7 +517,7 @@ The mobile codebase started with ~15 Modal sheets. They almost all copied the sa
 
 **Caveats that still apply:**
 
-- **Android falls back to a regular modal** — no rounded corners, no native drag. mobile/CLAUDE.md treats iOS as the primary target so this is acceptable, but document inline at the call site if a particular feature must work identically on both.
+- **Android falls back to a regular modal** — no rounded corners, no native drag. mobile/AGENTS.md treats iOS as the primary target so this is acceptable, but document inline at the call site if a particular feature must work identically on both.
 - **A formSheet pushed from inside a `presentation: "modal"` route is supported** by Expo Router 55 / RN Screens 4, but the back gesture from the formSheet returns to the modal, not the underlying tab. This is the right UX for the new-issue draft flow (sheet dismisses back to the form), but check the navigation graph if you're adding a sheet under a non-obvious parent.
 
 **Carve-out — picker-row consistency wins over per-container optimisation:**

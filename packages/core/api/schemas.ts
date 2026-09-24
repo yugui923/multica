@@ -2602,7 +2602,7 @@ export const EMPTY_REDEEM_DINGTALK_BINDING_TOKEN_RESPONSE: RedeemDingTalkBinding
 
 // WeCom smart-bot ("智能机器人" / aibot) installation responses. `.loose()` so a
 // newer backend field never fails the parse on an older desktop build (see
-// CLAUDE.md → API Compatibility). Defaults are chosen so a malformed response
+// AGENTS.md → API Compatibility). Defaults are chosen so a malformed response
 // degrades safely: `configured` defaults false (renders the "ask your operator"
 // state rather than a Connect dialog whose submit is guaranteed to fail), and a
 // missing `status` defaults to "revoked" rather than "active" so a broken read

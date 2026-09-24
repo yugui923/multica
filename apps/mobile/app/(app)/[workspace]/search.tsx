@@ -98,7 +98,7 @@ function HighlightText({
         p.hit ? (
           // Inline hex (yellow-200) instead of a Tailwind class because the
           // mobile tailwind.config.js intentionally curates its own palette
-          // (no `yellow-*`) — see apps/mobile/CLAUDE.md "Visual tokens".
+          // (no `yellow-*`) — see apps/mobile/AGENTS.md "Visual tokens".
           <Text
             key={i}
             className="text-foreground"

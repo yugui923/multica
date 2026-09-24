@@ -499,7 +499,7 @@ function LarkAgentBotStatusRow({
 // (international) bots at open.larksuite.com. The region is auto-detected
 // at install time and surfaced per installation on the listings
 // response; an older server that omits `region` defaults to Feishu
-// (API-compat — see CLAUDE.md).
+// (API-compat — see AGENTS.md).
 function larkDevConsoleHost(region?: string): string {
   return region === "lark"
     ? "https://open.larksuite.com"

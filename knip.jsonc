@@ -1,7 +1,7 @@
 {
   "$schema": "https://unpkg.com/knip@6/schema.json",
 
-  // Guards the invariant in CLAUDE.md "Package Boundaries": every workspace
+  // Guards the invariant in AGENTS.md "Package Boundaries": every workspace
   // declares the external packages it actually imports, and nothing else.
   // `.npmrc` sets `shamefully-hoist=true`, so an undeclared import still
   // resolves at runtime and an obsolete declaration still installs — neither
@@ -14,7 +14,7 @@
   "include": ["files", "dependencies", "unlisted"],
 
   // Go, and a workspace with its own Expo toolchain, lint pipeline, and React
-  // version (see apps/mobile/CLAUDE.md). Neither is covered by this config.
+  // version (see apps/mobile/AGENTS.md). Neither is covered by this config.
   "ignoreWorkspaces": ["apps/mobile"],
 
   "workspaces": {
@@ -43,7 +43,7 @@
     "apps/docs": {},
 
     // The three shared packages export raw .ts/.tsx compiled by their
-    // consumers (CLAUDE.md "Project Shape"), so `entry` names only the config
+    // consumers (AGENTS.md "Project Shape"), so `entry` names only the config
     // files knip would otherwise miss and the apps supply the real entry
     // points — a file is live when an app reaches it.
     //

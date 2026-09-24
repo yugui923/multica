@@ -257,4 +257,4 @@ React-tree renderer:
 - `apps/mobile/lib/markdown/code-block.tsx` — Shiki-powered code segment
 - `apps/mobile/lib/markdown/markdown-image.tsx` — lightbox-aware image segment
 - `apps/mobile/docs/markdown-renderer-research.md` — full incident log and historical context
-- `apps/mobile/CLAUDE.md` — mobile-wide rules including theme/CSS-variable system
+- `apps/mobile/AGENTS.md` — mobile-wide rules including theme/CSS-variable system

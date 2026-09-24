@@ -1072,7 +1072,7 @@ function SquadOverviewPane({
 // same semantic tokens so a status dot here matches the agent page's dot.
 // Unknown / null statuses (human members, server-side enum drift) render as
 // a neutral muted pill; this is the "downgrade, don't crash" defense from
-// CLAUDE.md > API Response Compatibility.
+// AGENTS.md > API Response Compatibility.
 const SQUAD_STATUS_DOT_CLASS: Record<SquadMemberStatusValue, string> = {
   working: "bg-success",
   idle: "bg-muted-foreground/40",

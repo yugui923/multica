@@ -3,7 +3,7 @@
  * Multica agent. Wire shape mirrors `WecomInstallationResponse` in
  * `server/internal/handler/wecom_web.go`. Any new field the backend adds MUST
  * default to optional so older desktop builds keep parsing the response — see
- * CLAUDE.md → API Compatibility.
+ * AGENTS.md → API Compatibility.
  */
 export interface WecomInstallation {
   id: string;

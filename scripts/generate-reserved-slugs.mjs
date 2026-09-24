@@ -32,7 +32,7 @@ lines.push(" *");
 lines.push(" * Single source of truth: `server/internal/handler/reserved_slugs.json`.");
 lines.push(" * The Go backend embeds that JSON; this file is regenerated from it.");
 lines.push(" *");
-lines.push(" * Convention for new global routes (CLAUDE.md): use a single word");
+lines.push(" * Convention for new global routes (AGENTS.md): use a single word");
 lines.push(" * (`/login`, `/inbox`) or `/{noun}/{verb}` (`/workspaces/new`). Hyphenated");
 lines.push(" * root-level word groups (`/new-workspace`, `/create-team`) collide with");
 lines.push(" * common user workspace names — see PR for full discussion.");

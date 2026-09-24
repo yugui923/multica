@@ -124,7 +124,7 @@ describe("freeze breadcrumb survives an undelivered report", () => {
 
 // The breadcrumb crosses a process boundary (main writes, renderer flushes via
 // IPC) and lives across app versions — a future write shape or a corrupt file
-// must never throw into boot. CLAUDE.md "API Response Compatibility".
+// must never throw into boot. AGENTS.md "API Response Compatibility".
 describe("freeze breadcrumb defends against malformed input", () => {
   it("returns null when no file exists", () => {
     expect(readFreezeBreadcrumb(tempFile(), fresh)).toBeNull();

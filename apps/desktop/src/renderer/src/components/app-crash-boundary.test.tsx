@@ -59,7 +59,7 @@ describe("AppCrashBoundary", () => {
   it("keeps the window draggable by mounting the drag strip as the first child", () => {
     // A full-window view outside the dashboard shell owns its own window
     // chrome. Without this the user loses the draggable top edge precisely
-    // when the app is least usable — see CLAUDE.md Desktop Rules.
+    // when the app is least usable — see AGENTS.md Desktop Rules.
     const { container } = render(
       <AppCrashBoundary>
         <Boom />

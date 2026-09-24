@@ -227,7 +227,7 @@ func TestSetAgentRuntimeSkillEnabledPersistsScopedOverride(t *testing.T) {
 }
 
 // TestGetSkill_MalformedUUIDReturns400 guards the handler UUID parsing
-// convention (CLAUDE.md → "Backend Handler UUID Parsing Convention"): raw
+// convention (AGENTS.md → "Backend Handler UUID Parsing Convention"): raw
 // `id` URL params on the request boundary must be validated with
 // parseUUIDOrBadRequest, not the panic-prone parseUUID. Before the fix
 // the malformed input panicked in MustParseUUID and was rescued by the

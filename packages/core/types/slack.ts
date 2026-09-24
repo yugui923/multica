@@ -3,7 +3,7 @@
  * Wire shape mirrors `SlackInstallationResponse` in
  * `server/internal/handler/slack.go`. New fields the backend adds in the
  * future MUST default to optional so older desktop builds keep parsing the
- * response — see CLAUDE.md → API Compatibility. */
+ * response — see AGENTS.md → API Compatibility. */
 export interface SlackInstallation {
   id: string;
   workspace_id: string;

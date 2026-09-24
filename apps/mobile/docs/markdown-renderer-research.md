@@ -225,7 +225,7 @@ The DB has two mention serializations because of an April 2026 migration:
 - **New**: `[@Label](mention://member/id)` — emitted by current Tiptap editor
 - **Legacy**: `[@ id="abc-123" label="Naiyuan"]` — old shortcode form
 
-Mobile must convert legacy → new before parsing, otherwise old comments render the literal shortcode text. Logic is a pure regex transform — `packages/ui/markdown/index.ts` exports `preprocessMentionShortcodes` for web/desktop, but mobile **cannot** import from `@multica/ui/*` (Sharing Principles in `apps/mobile/CLAUDE.md`).
+Mobile must convert legacy → new before parsing, otherwise old comments render the literal shortcode text. Logic is a pure regex transform — `packages/ui/markdown/index.ts` exports `preprocessMentionShortcodes` for web/desktop, but mobile **cannot** import from `@multica/ui/*` (Sharing Principles in `apps/mobile/AGENTS.md`).
 
 Two options:
 

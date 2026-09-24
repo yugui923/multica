@@ -80,7 +80,7 @@ describe("inbox list schema", () => {
   });
 
   it("renders an unknown server type instead of dropping the row", () => {
-    // Mirrors the root CLAUDE.md API-compatibility rule and mobile's own
+    // Mirrors the root AGENTS.md API-compatibility rule and mobile's own
     // "render every inbox type, never silently drop a category" parity rule: a
     // type this build has never heard of must still parse.
     const future = {

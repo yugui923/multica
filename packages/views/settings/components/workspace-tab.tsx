@@ -281,7 +281,7 @@ export function WorkspaceTab() {
     if (!workspace) return;
     setActionId("delete-workspace");
     // Await the DELETE with the dialog in its loading state, and only
-    // navigate on success (CLAUDE.md: flows that navigate must await the
+    // navigate on success (AGENTS.md: flows that navigate must await the
     // server; no optimistic removal). The realtime `workspace:deleted`
     // handler skips self-initiated deletes via the pending-delete registry,
     // so it can't race this navigation with its own full-page relocate.

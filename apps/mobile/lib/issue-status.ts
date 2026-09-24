@@ -8,7 +8,7 @@
  *
  * If web ever reorders BOARD_STATUSES or adds/removes a status, this file
  * must be updated to keep the "Counts and visibility must agree" rule
- * (apps/mobile/CLAUDE.md) intact.
+ * (apps/mobile/AGENTS.md) intact.
  */
 import type { IssuePriority, IssueStatus } from "@multica/core/types";
 

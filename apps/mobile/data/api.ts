@@ -7,7 +7,7 @@
  * runtime coupling. Zod schemas + fallbacks are imported from
  * @multica/core/api/schemas (pure data, on the mobile sharing whitelist).
  *
- * Design checklist (apps/mobile/CLAUDE.md "Lessons → ApiClient capability list"):
+ * Design checklist (apps/mobile/AGENTS.md "Lessons → ApiClient capability list"):
  *   1. Zod parseWithFallback for endpoints with schemas (drift defense)
  *   2. onUnauthorized callback on 401 (auto sign-out, avoids retry loops)
  *   3. X-Request-ID per request + structured logger (debug + tracing)
@@ -148,7 +148,7 @@ export interface FileAsset {
 }
 
 /** Web mirrors this from `packages/core/constants/upload.ts`. Mobile keeps
- *  its own copy per the `mirror, don't import` rule in apps/mobile/CLAUDE.md. */
+ *  its own copy per the `mirror, don't import` rule in apps/mobile/AGENTS.md. */
 const MAX_FILE_SIZE = 100 * 1024 * 1024;
 
 /** Hard ceiling for every HTTP request. Mobile-specific because iOS may
